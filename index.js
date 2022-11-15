@@ -2,6 +2,7 @@ const express =  require('express');
 const morgan  = require('morgan');
 const app = express();
 const pokemon = require('./routes/pokemon');
+const user = require('./routes/user');
 
 //FUNCIONES PARA EXPRESAR PETICIONES
 app.use(morgan('dev'));
@@ -21,6 +22,7 @@ app.get("/", (req, res, next) =>{
 });
 
 app.use("/pokemon", pokemon);
+app.use("/user", user);
 
 app.use((req,res,next) => {
     return res.status(404).json({code: 404, message: "URL no encontrada"})
