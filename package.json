@@ -27,6 +27,7 @@
   "homepage": "https://github.com/JuanC444/express_workshop#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20"
