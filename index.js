@@ -9,8 +9,10 @@ const user = require('./routes/user');
 const auth = require('./middleware/auth');
 const notFound = require('./middleware/notFound');
 const index = require('./middleware/index');
+const cors = require('./middleware/cors');
 
 //FUNCIONES PARA EXPRESAR PETICIONES
+app.use(cors);
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
